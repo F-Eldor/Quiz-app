@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Ilmla TESTS</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <h1>Ilmla TESTS</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/results">Result</a></li>
+                    <li><a href="#footer">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="re-log">
+                <button class="logout"><a href="/logout">Log Out</a></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="result-container">
+        <h1>Your Result</h1>
+        <p>Percentage: {{ foiz }}%</p>
+        <p>CEFR Level: {{ daraja }}</p>
+        <button class="re-btn"><a href="/quiz">Try Again</a></button>
+        <button class="re-btn"><a href="/">Back to Home</a></button>
+    </section>
+
+    <footer>
+        <div class="footer-wrapper" id="footer">
+            <div class="footer-left">
+                <h1>Ilmla TESTS</h1>
+            </div>
+            <div class="footer-right">
+                <div class="degrees">
+                    <ul>
+                        <li>A1 degree</li>
+                        <li>A2 degree</li>
+                        <li>B1 degree</li>
+                        <li>B2 degree</li>
+                        <li>C1 degree</li>
+                        <li>C2 degree</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="about-us">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit iure impedit labore.</p>
+                </div>
+                <div class="contact">
+                    <h1>Send us your message</h1>
+                    <input type="text" placeholder="Message">
+                    <button class="send">Send</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-wrapper">
+    <h1>Ilmla TESTS</h1>
+    <nav>
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/submit">Result</a></li>
+            <li><a href="#footer">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="re-log">
+        {% if session['foydalanuvchi'] %}
+        <button class="logout"><a href="/logout">Log Out</a></button>
+        {% else %}
+            <button class="register"><a href="/register">Register</a></button>
+            <button class="log"><a href="/login">Sign Up</a></button>
+        {% endif %}
+    </div>
+</div>
+</header>
+
+<div class="hero">
+    <h1>CEFR Checker</h1>
+    <p class="hero-p"><i>for free</i></p>
+</div>
+
+<section class="try">
+    <div class="try-wrapper">
+        <div class="right">
+            <h1>Find your score in minutes</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem explicabo inventore tempore fugiat vero molestiae facere voluptatem, similique delectus reprehenderit sed voluptate? Amet reiciendis quam maxime? Quasi, numquam modi.</p>
+            <button><a href="/quiz">Try it now</a></button>
+        </div>
+        <div class="left">
+            <img src="https://www.modulolearning.com/cdn-cgi/image/f=auto,%20fit=scale-down,%20width=842,%20height=596/assets/images/cefr-levels.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="cefr try">
+    <div class="cefr-wrapper">
+        <div class="right">
+            <h1>What is CEFR</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat temporibus consectetur porro, quisquam incidunt molestiae odio? Id sint error ex consequatur, assumenda veritatis culpa animi. Quas, consectetur! Rem, quasi blanditiis?</p>
+            <button><a href="/quiz">Try it now</a></button>
+        </div>
+        <div class="left">
+            <img class="cefr-img" src="https://www.cathoven.com/wp-content/uploads/2023/12/cefr-levels.gif" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <h1 class="main-h1">Just click here</h1>
+    <p class="main-p">
+        <i>no card needed</i>
+    </p>
+    <button class="main-btn"><a href="/quiz">Click here</a></button>
+</section>
+
+<footer>
+    <div class="footer-wrapper" id="footer">
+        <div class="footer-left">
+            <h1>Ilmla TESTS</h1>
+        </div>
+        <div class="footer-right">
+            <div class="degrees">
+                <ul>
+                    <li>A1 degree</li>
+                    <li>A2 degree</li>
+                    <li>B1 degree</li>
+                    <li>B2 degree</li>
+                    <li>C1 degree</li>
+                    <li>C2 degree</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="about-us">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit iure impedit labore, consequatur magnam atque provident obcaecati animi cum alias fugiat illum repudiandae ea sequi ipsam in officiis excepturi voluptatem mollitia odio quidem accusamus.</p>
+            </div>
+            <div class="contact">
+                <h1>Send us your message</h1>
+                <input type="text" placeholder="Message">
+                <button class="send">Send</button>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

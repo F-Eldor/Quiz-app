@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Ilmla TESTS</title>
+    <link rel="stylesheet" href="/static/css/quiz.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <h1>Ilmla TESTS</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Bosh sahifa</a></li>
+                    <li><a href="/results">Natija</a></li>
+                    <li><a href="#footer">Biz haqimizda</a></li>
+                    <li><a href="#footer">Aloqa</a></li>
+                </ul>
+            </nav>
+            <div class="re-log">
+                <button class="logout"><a href="/logout">Chiqish</a></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="quiz-container">
+        <h1>CEFR Quiz</h1>
+        <div id="timer-bar">
+            <div id="timer-progress"></div>
+        </div>
+        <div id="question-box">
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="feedback"></div>
+        </div>
+
+        <script id="savollar-data" type="application/json">
+            {{ savollar | tojson | safe }}
+        </script>
+    </section>
+
+    <footer>
+        <div class="footer-wrapper" id="footer">
+            <div class="footer-left">
+                <h1>Ilmla TESTS</h1>
+            </div>
+            <div class="footer-right">
+                <div class="degrees">
+                    <ul>
+                        <li>A1 daraja</li>
+                        <li>A2 daraja</li>
+                        <li>B1 daraja</li>
+                        <li>B2 daraja</li>
+                        <li>C1 daraja</li>
+                        <li>C2 daraja</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="about-us">
+                    <h1>Biz haqimizda</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit iure impedit labore.</p>
+                </div>
+                <div class="contact">
+                    <h1>Xabar yuboring</h1>
+                    <input type="text" placeholder="Xabar">
+                    <button class="send">Yuborish</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/quiz.js"></script>
+</body>
+</html>

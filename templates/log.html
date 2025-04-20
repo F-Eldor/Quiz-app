@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Form</title>
+    <link rel="stylesheet" href="/static/css/log.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <form method="POST" action="{{ url_for('login') }}">
+                <h1>Login</h1>
+                {% if form_type == 'login' and xabar %}
+                    <p style="color: red;">{{ xabar }}</p>
+                {% endif %}
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="foydalanuvchi_nomi" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="parol" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form method="POST" action="{{ url_for('register') }}">
+                <h1>Registration</h1>
+                {% if form_type == 'register' and xabar %}
+                    <p style="color: red;">{{ xabar }}</p>
+                {% endif %}
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="foydalanuvchi_nomi" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="parol" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn" id="register-btn">Register</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn" id="login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
